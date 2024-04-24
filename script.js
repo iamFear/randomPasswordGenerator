@@ -1,8 +1,9 @@
 "use strict";
 
 // Function to generate random passwords
+// NOTE: Default password lenght is 8, default use of symbols is true
 
-const createRandomPass = (length, useSymbols) => {
+const createRandomPass = (length = 8, useSymbols = true) => {
   const uppercase = [
     "A",
     "B",
@@ -36,20 +37,24 @@ const createRandomPass = (length, useSymbols) => {
   const nums = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
   // Colection of arrays
-  const regular = [uppercase, lowercase, symbols, nums];
-  const noSymbols = [uppercase, lowercase, nums];
+  const regular = [...uppercase, ...lowercase, ...symbols, ...nums];
+  const noSymbols = [...uppercase, ...lowercase, ...nums];
 
   let output = ``;
 
   // If user wants symbols
-  for (let i = 0; i < length; i++) {
-    const arr = regular[Math.trunc(Math.random() * regular.length)];
-    output += arr[Math.trunc(Math.random() * arr.length)];
+  if (useSymbols === true) {
+    for (let i = 0; i < length; i++) {
+      // Choose a random character from the regular array and then add it to the output
+      output += regular[Math.trunc(Math.random() * regular.length)];
+    }
+    // If user dont want symbols
+  } else {
+    for (let i = 0; i < length; i++) {
+      // Choose a random character from the regular array and then add it to the output
+      output += noSymbols[Math.trunc(Math.random() * noSymbols.length)];
+    }
   }
-
-  // If user dont want symbols
 
   return output;
 };
-
-console.log(createRandomPass(12));
