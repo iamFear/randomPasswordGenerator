@@ -25,17 +25,23 @@ html {
 
 body {
   background-color: #083344;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 main {
-  width: 50vw;
+  width: 80vw;
   height: 100vh;
 
   background-color: #083344;
 
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: start;
   justify-content: center;
+  gap: 4.8rem;
 }
 
 h1 {
@@ -48,4 +54,66 @@ h1 {
   color: #4ade80;
   border-bottom: 5px solid #4ade80;
   padding-bottom: 3px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.option {
+  padding: 1rem 1.2rem;
+  background-color: #22c55e;
+  border-radius: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+p {
+  color: #e2e8f0;
+  font-size: 2.2rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.length {
+  width: 39rem;
+}
+
+.length-input {
+  background-color: #15803d;
+  border: 0;
+  border-radius: 15px;
+  width: 3.5rem;
+  height: 2.4rem;
+  margin-top: 0.25rem;
+
+  text-align: center;
+  font-weight: 500;
+  color: #e2e8f0;
+}
+
+.symbol {
+  width: 50.5rem;
+}
+
+.symbol-input {
+  width: 2.5rem;
+  height: 2.4rem;
+  background-color: #15803d;
+  border-radius: 1000px;
+  margin-top: 0.25rem;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.hidden {
+  display: none;
 }
