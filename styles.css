@@ -73,6 +73,10 @@ h1 {
   justify-content: space-between;
 }
 
+.option div {
+  box-shadow: 0px 0px 10px 0.5px rgba(0, 0, 0, 0.15);
+}
+
 p {
   color: #e2e8f0;
   font-size: 2.2rem;
@@ -106,7 +110,7 @@ p {
 
 .symbol-input {
   width: 2.5rem;
-  height: 2.4rem;
+  height: 2.5rem;
   background-color: #15803d;
   border-radius: 1000px;
   margin-top: 0.25rem;
@@ -127,4 +131,48 @@ p {
   color: orangered;
   font-weight: 400;
   letter-spacing: 0.5px;
+}
+
+.password-container {
+  width: 36rem;
+  height: 3rem;
+
+  background-color: #e2e8f0;
+
+  padding: 2rem 1.2rem;
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.password-output,
+.copy-icon {
+  color: orange;
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+.copy-icon {
+  cursor: pointer;
+}
+
+.generate-password {
+  display: inline-block;
+  width: 24rem;
+  height: 3.5rem;
+
+  background-color: #22c55e;
+  padding: 2rem 1.2rem;
+  border-radius: 10px;
+  border: 0;
+
+  color: #e2e8f0;
+  font-size: 2.2rem;
+  font-weight: 600;
+
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }

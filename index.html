@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
     <link rel="stylesheet" href="styles.css" />
 
     <title>Random - Easily generate random passwords</title>
@@ -13,22 +17,32 @@
         Generate a <br />
         <span class="random-green"> Random Password </span>
       </h1>
-      
+
       <div class="content-div">
         <div class="option length">
           <p>Choose your password length:</p>
           <form action="#">
-            <input type="number" class="length-input" value="4">
+            <input type="number" class="length-input" value="4" />
           </form>
         </div>
         <div class="option symbol">
           <p>Do you want to include symbols? (%, &, *)</p>
-          <div class="symbol-input symbol-input-active"><span class="check-icon hidden">✓</span></div>
+          <div class="symbol-input symbol-input-active">
+            <span class="check-icon hidden">✓</span>
+          </div>
           <!-- Check Symbol ✓ -->
         </div>
         <!-- If password is < 4 || > 20: Display this element < -->
-        <h2 class="error hidden">Please choose a length between 4 and 20 characters.</h2>
-      </div>
+        <h2 class="error hidden">
+          Please choose a length between 4 and 20 characters.
+        </h2>
+        <div class="password-container">
+          <p class="password-output">Awaiting for Password...</p>
+          <span class="material-symbols-outlined copy-icon">
+            content_copy
+          </span>
+        </div>
+        <button class="generate-password"><p>Generate Password</p></button>
       </div>
     </main>
   </body>
