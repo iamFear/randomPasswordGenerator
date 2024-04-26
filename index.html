@@ -14,7 +14,7 @@
         <span class="random-green"> Random Password </span>
       </h1>
       
-      <div class="options">
+      <div class="content-div">
         <div class="option length">
           <p>Choose your password length:</p>
           <form action="#">
@@ -26,6 +26,8 @@
           <div class="symbol-input symbol-input-active"><span class="check-icon hidden">✓</span></div>
           <!-- Check Symbol ✓ -->
         </div>
+        <!-- If password is < 4 || > 20: Display this element < -->
+        <h2 class="error hidden">Please choose a length between 4 and 20 characters.</h2>
       </div>
       </div>
     </main>

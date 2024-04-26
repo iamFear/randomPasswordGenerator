@@ -56,10 +56,11 @@ h1 {
   padding-bottom: 3px;
 }
 
-.options {
+.content-div {
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
+  font-size: 1.8rem;
 }
 
 .option {
@@ -80,20 +81,23 @@ p {
 }
 
 .length {
-  width: 39rem;
+  width: 42.6rem;
 }
 
 .length-input {
   background-color: #15803d;
   border: 0;
   border-radius: 15px;
-  width: 3.5rem;
-  height: 2.4rem;
+  margin-left: 3rem;
+  width: 4.8rem;
+  height: 2.5rem;
   margin-top: 0.25rem;
 
   text-align: center;
-  font-weight: 500;
+  font-weight: 600;
   color: #e2e8f0;
+  font-size: 1.8rem;
+  padding-left: 0.5rem;
 }
 
 .symbol {
@@ -116,4 +120,11 @@ p {
 
 .hidden {
   display: none;
+}
+
+.error {
+  margin-left: 0.4rem;
+  color: orangered;
+  font-weight: 400;
+  letter-spacing: 0.5px;
 }
