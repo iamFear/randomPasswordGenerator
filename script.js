@@ -58,3 +58,8 @@ const createRandomPass = (length = 8, useSymbols = true) => {
 
   return output;
 };
+
+// DOM Manipulation:
+const passwordLengthInput = document.querySelectorAll(".length-input");
+
+console.log(passwordLengthInput.value);
