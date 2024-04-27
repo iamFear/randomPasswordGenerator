@@ -127,7 +127,7 @@ p {
   display: none;
 }
 
-.error {
+.message {
   margin-left: 0.4rem;
   color: orangered;
   font-weight: 400;
@@ -188,4 +188,8 @@ p {
 .generate-password:active {
   background-color: #22c55e;
   color: rgba(226, 232, 240, 0.9);
+}
+
+.success {
+  color: #22c55e;
 }
