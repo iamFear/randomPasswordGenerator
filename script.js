@@ -3,7 +3,7 @@
 // Function to generate random passwords
 // NOTE: Default password lenght is 8, default use of symbols is true
 
-const createRandomPass = (length = 8, useSymbols = false) => {
+const createRandomPass = (length = 4, useSymbols = false) => {
   const uppercase = [
     "A",
     "B",
@@ -37,26 +37,34 @@ const createRandomPass = (length = 8, useSymbols = false) => {
   const nums = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
   // Colection of arrays
-  const regular = [...uppercase, ...lowercase, ...symbols, ...nums];
-  const noSymbols = [...uppercase, ...lowercase, ...nums];
 
-  let output = ``;
+  // Define character set based on whether useSymbols is true or false
+  const regular = useSymbols
+    ? [...uppercase, ...lowercase, ...nums, ...symbols]
+    : [...uppercase, ...lowercase, ...nums];
 
-  // If user wants symbols
-  if (useSymbols === true) {
-    for (let i = 0; i < length; i++) {
-      // Choose a random character from the regular array and then add it to the output
-      output += regular[Math.trunc(Math.random() * regular.length)];
-    }
-    // If user dont want symbols
-  } else {
-    for (let i = 0; i < length; i++) {
-      // Choose a random character from the regular array and then add it to the output
-      output += noSymbols[Math.trunc(Math.random() * noSymbols.length)];
-    }
+  let output = new Array(length);
+  let randomIndex = false;
+
+  // Ensure at least one symbol if useSymbols is true
+  if (useSymbols) {
+    const randomSymbol = symbols[Math.trunc(Math.random() * symbols.length)];
+    randomIndex = Math.trunc(Math.random() * length);
+
+    output[randomIndex] = randomSymbol;
+    length - length - 2; // Decrease length by 2 to account for the added symbol
   }
 
-  return output;
+  // Generate the rest of the password
+  for (let i = 0; i < length; i++) {
+    if (i === randomIndex) {
+      continue;
+    }
+    output[i] = regular[Math.trunc(Math.random() * regular.length)];
+  }
+
+  console.log(output);
+  return output.join("");
 };
 
 // Track if the user want symbols or not
