@@ -52,7 +52,6 @@ const createRandomPass = (length = 4, useSymbols = false) => {
     randomIndex = Math.trunc(Math.random() * length);
 
     output[randomIndex] = randomSymbol;
-    length - length - 2; // Decrease length by 2 to account for the added symbol
   }
 
   // Generate the rest of the password
@@ -63,7 +62,7 @@ const createRandomPass = (length = 4, useSymbols = false) => {
     output[i] = regular[Math.trunc(Math.random() * regular.length)];
   }
 
-  console.log(output);
+  // Join the output array to return a string
   return output.join("");
 };
 
